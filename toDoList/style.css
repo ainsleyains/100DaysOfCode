@@ -1,0 +1,86 @@
+html {
+    height: 100%;
+    font-size: 1rem;
+}
+
+body {
+    background-color:#05445E;
+    color: #D4F1F4;
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 4rem;
+}
+
+main {
+    max-width: 359.5px;
+}
+
+#submit-todo {
+    display: flex;
+}
+
+#input {
+    padding: 10px;
+    font-size: 0.8em;
+}
+
+#save {
+    padding: 0 20px;
+    margin-left: 10px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 0.8em;
+    background-color: #B5E5CF;
+}
+
+#save:hover {
+    background-color: #71f0b7;
+    color: white;
+    cursor: pointer;
+}
+
+.delete :after {
+    content:\2717;
+    display: inline-block;
+    margin-left: 10px;
+    color: red;
+}
+
+#todolist {
+    margin-top: 3rem;
+    margin-bottom: 0;
+    
+}
+#todolist li {
+    margin-bottom: 10px;
+    
+}
+#preview {
+    margin-top: 0;
+}
+.preview {
+    display: none;
+}
+.preview:not(:empty) {
+    display: list-item;
+}
+
+.delete:after {
+    content: '\2717';
+    display: inline-block;
+    margin-left: 10px;
+    color: red;
+}
+
+.delete:hover {
+    cursor: pointer;
+}
