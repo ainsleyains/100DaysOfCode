@@ -1,0 +1,7 @@
+
+
+const random = Math.random();
+
+const play = random <0.5 ? 'heads': 'tails'
+
+console.log(play)
