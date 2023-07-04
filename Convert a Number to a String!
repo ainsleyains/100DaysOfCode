@@ -6,7 +6,7 @@
 // 123  --> "123"
 
 function numberToString(num) {
- return String(num)
+ return String(num);
 }
 
 numberToString(123)
