@@ -1,0 +1,11 @@
+// Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+// invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
+
+
+function invert(array) {
+    const map1 = array.map(ele =>  ele * -1 );
+    return map1;
+ }
+ 
+ invert([1,-2,3,-4,5])
