@@ -1,0 +1,16 @@
+// Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+// Examples (Input -> Output):
+// * "String"      -> "SSttrriinngg"
+// * "Hello World" -> "HHeelllloo  WWoorrlldd"
+
+
+function doubleChar(str) {
+  let newArr = []
+  for(let i = 0; i < str.length; i++) {
+    newArr = newArr +(str[i] + str[i])
+  }
+  return newArr
+}
+
+doubleChar("1337")
