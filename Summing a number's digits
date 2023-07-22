@@ -1,0 +1,22 @@
+// Write a function named sumDigits which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits.
+
+// For example: (Input --> Output)
+
+// 10 --> 1
+// 99 --> 18
+// -32 --> 5
+
+function sumDigits(n) {
+  if (n < 0) n = -n
+  let result = 0
+
+  while (n > 0) 
+   {
+    result += n % 10
+    n = Math.floor(n / 10)
+  }
+
+  return result
+}
+
+sumDigits(-800209496)
