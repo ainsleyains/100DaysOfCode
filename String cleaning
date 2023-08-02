@@ -1,0 +1,14 @@
+// Your program will take in a string and clean out all numeric characters, and return a string with spacing and special characters ~#$%^&!@*():;"'.,? all intact.
+
+// Examples (input -> output)
+// '! !'                 -> '! !'
+// '123456789'           -> ''
+// 'This looks5 grea8t!' -> 'This looks great!'
+
+
+function stringClean(s){
+  
+  return s.replace(/\d+/g, '')
+}
+
+stringClean("(E3at m2e2!!)")
