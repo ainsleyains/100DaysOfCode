@@ -1,0 +1,12 @@
+// Given a mixed array of number and string representations of integers, add up the non-string integers and subtract the total of the string integers.
+
+// Return as a number.
+
+
+function divCon(x){
+  const num = x.filter(num => typeof num === 'number').reduce((acc,curr) => acc + curr, 0);
+  const str = x.filter(num => typeof num === 'string').map(toNum => Number(toNum)).reduce((acc,curr) => acc + curr, 0);
+  return num - str;
+}
+
+divCon([9, 3, '7', '3'])
