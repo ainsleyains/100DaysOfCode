@@ -1,0 +1,14 @@
+// Write a function that takes the website date/time in its original string format and returns the shortened format.
+
+// Input
+// Input will always be a string, e.g., "Friday May 2, 7pm". 
+
+// Output
+// Output will be the shortened string, e.g., "Friday May 2".
+
+
+function shortenToDate(longDate) {
+  return longDate.split(",")[0];
+}
+
+shortenToDate("Tuesday January 29, 10pm")
