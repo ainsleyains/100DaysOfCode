@@ -1,0 +1,18 @@
+// If the text or the character are empty, return an empty string.
+// There will never be a case when both are empty as nothing is going on!!
+
+// Note: The character is a string of length 1 or an empty string.
+
+// Example
+// text before = "abc"
+// character   = "z"
+// text after  = "zzz"
+
+
+function contamination(text, char){
+  
+  const words= text.split('');
+  return text === ' ' || char === '' ?  '' : words.map(word=>word.replace(word,char)).join('');
+}
+
+contamination("_3ebzgh4","&")
