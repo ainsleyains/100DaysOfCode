@@ -1,0 +1,12 @@
+// Complete the function power_of_two/powerOfTwo (or equivalent, depending on your language) that determines if a given non-negative integer is a power of two.
+
+// Examples
+// isPowerOfTwo(1024) // -> true
+// isPowerOfTwo(4096) // -> true
+// isPowerOfTwo(333)  // -> false
+
+function isPowerOfTwo(n){
+ return Math.log2(n) % 1 === 0;
+}
+
+isPowerOfTwo(5)
