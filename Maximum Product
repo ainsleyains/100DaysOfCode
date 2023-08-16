@@ -1,0 +1,17 @@
+//Given an array of integers , Find the maximum product obtained from multiplying 2 adjacent numbers in the array.
+
+// Input >> Output Examples
+// adjacentElementsProduct([1, 2, 3]); ==> return 6
+
+
+function adjacentElementsProduct(array) {
+  let newArr = []
+  for(let i =1 ; i < array.length; i++){
+    const x = array[i];
+    const y = array[i-1];
+    newArr.push(x*y);
+  }
+  return Math.max(...newArr);
+}
+
+adjacentElementsProduct([1, 5, 10, 9])
