@@ -1,0 +1,13 @@
+// Array/list size is at least 3.
+// Array/list's numbers could be a mixture of positives , negatives and zeros.
+// Repetition in array/list's numbers could occur, so don't remove duplications.
+// Input >> Output Examples
+// arr=[3,1,2]            n=2    ==> return 2 
+// arr=[15,20,7,10,4,3]   n=3    ==> return 7 
+
+function nthSmallest(arr, pos){
+ arr=arr.sort((a,b)=>a-b);
+  return arr[pos - 1];
+}
+
+nthSmallest(          [3,1,2], 2)
