@@ -1,0 +1,17 @@
+// Given an array/list [] of n integers , Separate The even numbers from the odds , or Separate the men from the boys
+
+// Return an array/list where Even numbers come first then odds
+
+// Since , Men are stronger than Boys , Then Even numbers in ascending order While odds in descending .
+
+
+
+function menFromBoys(arr){
+  arr = [...new Set(arr)];
+ const even = arr.filter(num => num%2 == 0).sort((a,b)=>a-b);
+ const odd = arr.filter(num=>num%2 !== 0).sort((a,b)=>b-a);
+ return even.concat(odd);
+}
+
+menFromBoys([ 72, 76, 76, 82, 100, 91, 85 ])
+
