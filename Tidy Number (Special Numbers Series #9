@@ -1,0 +1,14 @@
+// Given a number, Find if it is Tidy or not .
+
+
+
+function tidyNumber(n){
+  const num = n.toString()
+  for(let i = 0; i < num.length; i++) {
+    if(num[i] > num[i+1]) return false;
+  }
+  return true
+}
+
+
+tidyNumber(9672)
