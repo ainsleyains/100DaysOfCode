@@ -1,0 +1,15 @@
+// Given a string s. You have to return another string such that even-indexed and odd-indexed characters of s are grouped and groups are space-separated 
+
+// input: 'CodeWars'
+// output 'CdWr oeas'
+
+
+
+function sortMyString(S) {
+    const even = S.split('').filter((ele,i)=>i%2 === 0).join('');
+    const odd = S.split('').filter((ele,i)=>i%2 !== 0).join('');
+    return `${even} ${odd}`
+}
+
+sortMyString("CodeWars")
+
