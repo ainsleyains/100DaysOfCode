@@ -1,0 +1,12 @@
+// a piece of paper has a thickness of 0.0001m. Given distance in units of meters, calculate how many times you have to fold the paper to make the paper reach this distance.
+//  if somebody is giving you a negative distance, it's clearly bogus and you should yell at them by returning null
+
+
+function foldTo(distance) {
+  if (distance < 0) return null;
+  let counter = 0;
+  for (var i = 0.0001; i < distance; i *= 2) counter += 1;
+  return counter
+}
+
+foldTo(384000000)
