@@ -1,0 +1,17 @@
+// Write function alternateCase which switch every letter in string from upper to lower and from lower to upper. E.g: Hello World -> hELLO wORLD
+
+
+
+
+function alternateCase(s) {
+  const map1 = s.split('').map((ele)=>{
+    if(ele === ele.toLowerCase()){
+        return ele.toUpperCase();
+    }else {
+      return ele.toLowerCase();
+    }
+    })
+   return map1.join('');
+}
+
+alternateCase("Hello World")
