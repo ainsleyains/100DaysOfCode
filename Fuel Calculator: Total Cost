@@ -1,0 +1,22 @@
+//  write a function that takes litres and pricePerLitre (in dollar) as arguments.
+
+// Purchases of 2 or more litres get a discount of 5 cents per litre, purchases of 4 or more litres get a discount of 10 cents per litre, and so on every two litres, up to a maximum discount of 25 cents per litre. But total discount per litre cannot be more than 25 cents. Return the total cost rounded to 2 decimal places. Also you can guess that there will not be negative or non-numeric inputs.
+
+
+
+function fuelPrice(litres, pricePerLitre) {
+  const a = 0.05, b = 0.1, c = 0.15, d = 0.2, e = 0.25;
+  if(litres >=2 && litres < 4) {
+    return Math.round((litres * pricePerLitre - litres*a)*100)/100;
+  } else if(litres>=4 && litres < 6) {
+    return Math.round((litres * pricePerLitre - litres*b)*100)/100;
+  } else if(litres>=6 && litres < 8) {
+    return Math.round((litres * pricePerLitre - litres*c)*100)/100;
+  } else if(litres>=8 && litres < 10) {
+    return Math.round((litres * pricePerLitre - litres*d)*100)/100;
+  }else {
+    return Math.round((litres * pricePerLitre - litres*e)*100)/100;
+  }
+} 
+
+fuelPrice(8, 2.5)
