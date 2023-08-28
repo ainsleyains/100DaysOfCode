@@ -1,0 +1,14 @@
+// Create a function add(n)/Add(n) which returns a function that always adds n to any number
+
+// var addOne = add(1);
+addOne(3); // 4
+
+
+
+function add(n) {
+  return function addNum( m) {
+    return n+m;
+  }
+}
+
+add(1)(3)
