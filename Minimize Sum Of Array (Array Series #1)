@@ -1,0 +1,16 @@
+// minSum({5,4,2,3}) ==> return (22) 
+// Explanation:
+// The minimum sum obtained from summing each two integers product ,  5*2 + 3*4 = 22
+
+
+
+function minSum(arr) {
+  let sum = 0;
+  const newNum = arr.sort((a,b)=>a-b);
+  for(let i = 0; i < newNum.length/2; i++) {
+    sum+= newNum[i] * newNum[newNum.length-1-i];
+  }
+  return sum;
+}
+
+minSum([5,4,2,3])
