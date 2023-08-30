@@ -1,0 +1,12 @@
+// Write a function that takes in a string and replaces all the vowels [a,e,i,o,u] with their respective positions within that string.
+// E.g:
+// vowel2index('this is my string') == 'th3s 6s my str15ng'
+
+// Your function should be case insensitive to the vowels.
+
+
+function vowel2index(str) {
+   return [...str].map((ele,i)=>ele.replace(/[aeiou]/ig,i+1)).join``;
+}
+
+vowel2index('this is my string')
