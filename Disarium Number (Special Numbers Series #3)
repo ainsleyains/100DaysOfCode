@@ -1,0 +1,19 @@
+// Given a number, Find if it is Disarium or not .
+
+
+// disariumNumber(89) ==> return "Disarium !!"
+// Explanation:
+// Since , 81 + 92 = 89 , thus output is "Disarium !!"
+
+
+
+function disariumNumber(n){
+  const str = String(n);
+  let sum = 0;
+  for(let i = 0; i < str.length; i++) {
+    sum += Math.pow(str[i],[i+1]);
+  }
+  return sum === n ? "Disarium !!" : "Not !!"
+}
+
+disariumNumber(135)
