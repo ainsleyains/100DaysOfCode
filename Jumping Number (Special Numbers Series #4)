@@ -1,0 +1,14 @@
+// Given a number, Find if it is Jumping or not .
+
+// Jumping number is the number that All adjacent digits in it differ by 1.
+
+
+function jumpingNumber(n){
+  n = String(n)
+  for(let i = 0; i < n.length-1; i++) {
+    if(Math.abs(n[i] -n[i+1]) !== 1) return 'Not!!';
+  }
+  return 'Jumping!!';
+}
+
+jumpingNumber(78408)
