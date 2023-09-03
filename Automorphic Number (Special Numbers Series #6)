@@ -1,0 +1,23 @@
+// A number is called Automorphic number if and only if its square ends in the same digits as the number itself.
+
+// Given a number determine if it Automorphic or not .
+
+// Input >> Output Examples
+// autoMorphic (25) -->> return "Automorphic" 
+// Explanation:
+// 25 squared is 625 , Ends with the same number's digits which are 25 .
+
+// autoMorphic (13) -->> return "Not!!"
+// Explanation:
+// 13 squared is 169 , Not ending with the same number's digits which are 69 .
+
+
+
+
+function automorphic(n){
+  n=String(n);
+  const s = String(Math.pow(n,2));
+  return n === s.slice(-n.length) ? "Automorphic" : "Not!!"; 
+}
+
+automorphic(25)
