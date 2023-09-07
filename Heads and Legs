@@ -1,0 +1,22 @@
+// Assuming there are no other types of animals, work out how many of each animal are there.
+
+// Return a tuple in Python - (chickens, cows) and an array list - [chickens, cows]/{chickens, cows} in all other languages
+
+// If either the heads & legs is negative, the result of your calculation is negative or the calculation is a float return "No solutions" (no valid cases)
+
+
+
+function animals(heads, legs){
+ const cows = (legs-2*heads) /2
+ const chicks = heads - cows
+ 
+  if ( heads === 0 && legs === 0 ) {
+    return [0, 0];
+    }  else if ( legs % 2 != 0 || chicks < 0 || cows < 0 ) {
+    return "No solutions";
+    }else {
+       return [chicks,cows];
+    }
+}
+
+animals(72, 200 )
