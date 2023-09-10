@@ -1,0 +1,10 @@
+// Complete the function which accepts two strings and calculates the golf score of a game. Both strings will be of length 18, and each character in the string will be a number between 1 and 9 inclusive.
+
+
+
+function golfScoreCalculator(parList, scoreList){
+  return [...scoreList].map((el,i)=>el-parList[i]).reduce((acc,curr)=>acc+curr,0);
+}
+
+
+golfScoreCalculator('443454444344544443', '353445334534445344')
