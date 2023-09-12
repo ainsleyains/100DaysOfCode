@@ -1,0 +1,20 @@
+// Your distributeEvenly function will take an array as an argument and needs to return a new array with the values distributed evenly.
+
+// Example:
+
+// Argument: ['one', 'one', 'two', 'two', 'three', 'three', 'four', 'four']
+
+// Result: ['one', 'two', 'three', 'four', 'one', 'two', 'three', 'four']
+
+// The underlying order will stay the same as in the original array. So in the case of our argument above, one comes before two so it stays this way in the returned array.
+
+
+
+const distributeEvenly = (array) => {
+  const arr = [...new Set(array)];
+  const map1 = arr.map(el => array.filter(ele => el === ele));
+  return array.map((el,i)=>map1.map(ele=>ele[i])).reduce((a,b)=>a.concat(b)).filter(_=>_);
+};
+
+
+ distributeEvenly(['one', 'one', 'two', 'two', 'three', 'three', 'four', 'one'])
