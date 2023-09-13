@@ -1,0 +1,19 @@
+// Given an array/list [] of integers , Find all the LEADERS in the array.
+
+// Input >> Output Examples
+// arrayLeaders ({1, 2, 3, 4, 0}) ==> return {4}
+// Explanation:
+// 4 is greater than the sum all the elements to its right side
+
+// Note : The last element 0 is equal to right sum of its elements (abstract zero).
+
+
+
+
+function arrayLeaders(n){
+return n.filter((el,i)=>{
+  const sum = n.slice(i+1).reduce((acc,curr)=>acc+curr,0);
+  return el > sum;
+})
+}
+arrayLeaders([16,17,4,3,5,2])
