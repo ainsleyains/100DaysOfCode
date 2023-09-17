@@ -1,0 +1,13 @@
+// Your task in this kata is to implement a function that calculates the sum of the integers inside a string. For example, in the string "The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog", the sum of the integers is 3635.
+
+// Note: only positive integers will be tested.
+
+
+
+function sumOfIntegersInString(s){
+
+   return s.match(/\d/gi) === null ? 0 : s.match(/\d+/gi).reduce((acc,curr)=>acc+ (+curr), 0);
+}
+
+
+sumOfIntegersInString("kHuuh9650BJ:GwlW8707xRYu,3445V#xW6256tOVRm8506HoEdx")
