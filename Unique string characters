@@ -1,0 +1,17 @@
+// In this Kata, you will be given two strings a and b and your task will be to return the characters that are not common in the two strings.
+
+// For example:
+
+// solve("xyab","xzca") = "ybzc" 
+// --The first string has 'yb' which is not in the second string. 
+// --The second string has 'zc' which is not in the first string. 
+
+
+
+function solve(a,b){
+ const strA = a.split('').filter(el=>!b.split('').includes(el)).join``
+ const strB = b.split('').filter(el=>!a.split('').includes(el)).join``
+ return strA.concat(strB);
+};
+
+solve("xyab","xzca")
