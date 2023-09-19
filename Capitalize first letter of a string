@@ -1,0 +1,19 @@
+// Write a function capitalize() which capitalizes the first letter (if any) of the given string. For example:
+
+// Input	Output
+// string	String
+// hello World	Hello World
+
+
+// JavaScript / CoffeeScript: Extend the String prototype with a method capitalize() so you can call it on a string like so: "string".capitalize()
+// Furthermore, the built-in string methods toUpperCase() and toLowerCase() are disabled
+
+
+
+String.prototype.capitalize = function () {
+  let code = this.charCodeAt(0);
+  if(code > 96 && code < 123) {
+    code -= 32;
+  }
+  return String.fromCharCode(code) + this.slice(1);
+}
