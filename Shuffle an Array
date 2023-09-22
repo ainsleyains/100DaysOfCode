@@ -1,0 +1,20 @@
+// Write a function to shuffle an array.
+
+// Ex.:
+
+// Input: [1,2,3,4]
+// Output: [3,1,4,2]
+// Assume input is array.
+
+
+
+function shuffle(arr) {
+    let i = arr.length,j;
+    while(i) {
+      j = Math.random()*i-- | 0 ;
+      [arr[i],arr[j]] = [arr[j],arr[i]];
+    }
+  return arr;
+}
+
+shuffle([1,2,3,4])
