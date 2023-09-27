@@ -1,0 +1,26 @@
+// Write a function that finds the sum of all its arguments.
+
+// eg:
+
+// sum(1, 2, 3) // => 6
+// sum(8, 2) // => 10
+
+
+function sum() {
+  let sum = 0;
+  for(let i = 0; i < arguments.length; i++){
+    sum += arguments[i];
+  }
+  return sum;
+}
+
+sum(5, 7, 9)
+
+
+// alternative way
+
+function sum(...arr) {
+  return arr.reduce((acc,curr)=>acc+curr,0);
+}
+
+sum(5, 7, 9)
