@@ -1,0 +1,15 @@
+// Given an array of N integers, you have to find how many times you have to add up the smallest numbers in the array until their Sum becomes greater or equal to K.
+
+// minimumSteps({1, 10, 12, 9, 2, 3}, 6)  ==>  return (2)
+// Explanation:
+// We add two smallest elements (1 + 2), their sum is 3 .
+
+// Then we add the next smallest number to it (3 + 3) , so the sum becomes 6 .
+
+
+function minimumSteps(numbers, value){
+  return numbers.sort((a,b)=>a-b).filter(el=>(value -= el) > 0).length;
+}
+
+minimumSteps([8,9,10,4,2], 23)
+
