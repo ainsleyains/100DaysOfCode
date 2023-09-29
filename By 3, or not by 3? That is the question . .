@@ -1,0 +1,16 @@
+// Given a series of digits as a string, determine if the number represented by the string is divisible by three.
+
+// Example:
+
+// "123"      -> true
+// "8409"     -> true
+// "100853"   -> false
+
+
+
+
+function divisibleByThree(str){
+  return [...str].reduce((acc,curr)=>+acc + +curr, 0) % 3 === 0;
+}
+
+divisibleByThree('123')
