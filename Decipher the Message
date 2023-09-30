@@ -1,0 +1,19 @@
+// Amy and May aren't allowed by their parents to have cell phones, so they still communitcate in class the good old fashioned way, by writing notes.
+
+// So that no snoopy teachers can read any found notes, the girls communicate in code.
+
+// May is having a hard time deciphering Amy's latest messages, can you help her figure it out?
+
+// Input: String written in Amy's code Output: String decoded to Engligh so May can read it
+
+
+
+function decipher(codedMessage){
+  const lower = 'abcdefghijklmnopqrstuvwxyz';
+  const upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  codedMessage = [...codedMessage].map(el=>lower.includes(el) ? lower[(lower.indexOf(el)+7)%26] :el).join``;
+  return [...codedMessage].map(el=>upper.includes(el) ? upper[(upper.indexOf(el)+7)%26] : el).join``  ;
+}
+
+
+decipher('HFZ FTR RHNK WKXLL BL LH VNMX')
