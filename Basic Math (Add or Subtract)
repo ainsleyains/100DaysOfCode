@@ -1,0 +1,9 @@
+// Do addition and subtraction on a given string. The return value must be also a string.
+
+
+
+function calculate(str) {
+str = str.replace(/plus/g,'+').replace(/minus/g,'-');
+return (eval(str)).toString();
+}
+calculate("1plus2plus3plus4")
