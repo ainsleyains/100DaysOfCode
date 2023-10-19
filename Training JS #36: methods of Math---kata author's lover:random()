@@ -1,0 +1,34 @@
+// Coding in function rndCode. Your task is to generate a random verification code. In accordance with the following rules:
+
+// the code length should be 8;
+
+// The 1st and 2nd characters should be two uppercase letters. The range is "ABCDEFGHIJKLM".
+
+// The 3rd-6th characters should be four numbers.
+
+// the 7th and 8th characters should be two symbols. The range is "~!@#$%^&*".
+
+// If Your code runs 100 times, It should generate 100 non duplicate verification codes.
+
+
+
+function rndCode(){
+   let letters ="ABCDEFGHIJKLM";
+  let numbers = '0123456789';
+  let symbols = "~!@#$%^&*";
+  let str = '';
+  for(let i = 1; i <= 8; i++ ){
+    if(i === 1 || i===2) {
+      str += letters[~~(letters.length*Math.random())];
+    }
+    if(i >2 && i< 7) {
+      str+=numbers[~~(numbers.length*Math.random())];
+    }
+    
+    if(i===7 || i === 8) {
+      str+=symbols[~~(symbols.length*Math.random())];
+    }
+  }
+
+  return str;
+}
