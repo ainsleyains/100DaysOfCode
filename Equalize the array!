@@ -1,0 +1,18 @@
+// No description!!!
+
+// Input :: [10,20,25,0]
+
+// Output :: ["+0", "+10", "+15", "-10"]
+
+
+function equalize(array){
+let arr = ['+0'];
+if (!array.length) return [];
+for(let i = 0; i < array.length-1; i++) {
+  const result = array[i+1] - array[0] ;
+  result >= 0 ? arr.push(`+${result}`) : arr.push(String(result));
+}
+  return arr;
+}
+
+equalize([10,12,24,50,0,15,20])
