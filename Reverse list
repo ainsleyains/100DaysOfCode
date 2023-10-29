@@ -1,0 +1,9 @@
+// Write reverseList function that simply reverses lists.
+
+
+
+function reverseList(arr) {
+  return arr.reverse();
+}
+
+reverseList([1,2,3])
