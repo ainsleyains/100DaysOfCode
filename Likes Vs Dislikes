@@ -1,0 +1,14 @@
+// Create a function that takes in a list of button inputs and returns the final state.
+
+// Examples
+// likeOrDislike([Dislike]) => Dislike
+// likeOrDislike([Like,Like]) => Nothing
+// likeOrDislike([Dislike,Like]) => Like
+// likeOrDislike([Like,Dislike,Dislike]) => Nothing
+
+
+function likeOrDislike(buttons) {
+return buttons.reduce((acc,curr)=> curr === acc ? 'Nothing' : curr, 'Nothing');
+}
+
+likeOrDislike(['Like','Dislike'])
