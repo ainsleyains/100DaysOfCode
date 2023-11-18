@@ -1,0 +1,27 @@
+// You have to search all numbers from inclusive 1 to inclusive a given number x, that have the given digit d in it.
+// The value of d will always be 0 - 9.
+// The value of x will always be greater than 0.
+
+// You have to return as an array
+
+// the count of these numbers,
+// their sum
+// and their product.
+
+// For example:
+// x = 11
+// d = 1
+// ->
+// Numbers: 1, 10, 11
+// Return: [3, 22, 110]
+
+
+
+function numbersWithDigitInside(x, d) {
+  const arr = [...Array(x).keys()].map(i=>i+1);
+  const num = arr.filter(el=>el.toString().includes(d));
+  return [num.length, num.reduce((a,b)=>a+b,0), num.length ? num.reduce((a, b)=> a*b, 1):0];
+}
+
+
+numbersWithDigitInside(5,6)
