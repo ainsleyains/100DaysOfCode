@@ -1,0 +1,21 @@
+// For frame 1 split all of them in groups of three starting by the first base (letter).
+
+// For frame 2 split all of them in groups of three starting by the second base (letter) but having the first base (letter) at the beggining.
+
+// For frame 3 split all of them in groups of three starting by the third letter, but having the first and second bases (letters) at the beginning in the same order.
+
+
+
+
+
+
+var decomposeSingleStrand= function( singleStrand){
+  const frame1 = singleStrand.match(/.{1,3}/g);
+ const frame2 = singleStrand.slice(0,1) +' '+ singleStrand.slice(1).match(/.{1,3}/g);
+ const frame3 = singleStrand.slice(0,2) +' '+ singleStrand.slice(2).match(/.{1,3}/g);
+
+  return (`Frame 1: ${frame1}\nFrame 2: ${frame2}\nFrame 3: ${frame3}`).replace(/[,]+/g, ' ');
+}
+
+
+decomposeSingleStrand("AGGTGACACCGCAAGCCTTATATTAGC")
