@@ -1,0 +1,23 @@
+// Create a function that takes an array of letters, and combines them into words in a sentence.
+
+// The array will be formatted as so:
+
+// [
+  // ['J','L','L','M'],
+  // ['u','i','i','a'],
+  // ['s','v','f','n'],
+  // ['t','e','e','']
+// ]
+
+
+
+function arrAdder(arr) {
+return arr[0].map((_,i)=>arr.map(ele=>ele[i]).join('')).join(' ');
+}
+
+arrAdder([
+['J','L','L','M'],
+['u','i','i','a'],
+['s','v','f','n'],
+['t','e','e','']
+])
