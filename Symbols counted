@@ -1,0 +1,16 @@
+// In this kata you will have to transform each string so that it contains count for every symbol it contains, starting from 2. The order of symbols should be preserved.
+
+// Example: abbreviation => a2b2revi2ton
+
+
+
+const transform = (s) => {
+  let count = {};
+  for(let i of s){
+    count[i] = count[i] ? count[i] +1 : 1;
+  }
+  return Object.keys(count).map(el=>count[el] === 1 ? el : el + count[el]).join('');
+}
+
+
+transform('elevation')
