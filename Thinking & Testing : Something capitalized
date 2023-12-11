@@ -1,0 +1,26 @@
+// No Story
+
+// No Description
+
+// Only by Thinking and Testing
+
+// Look at result of testcase, guess the code!
+
+
+
+function testit(s){
+  return s.replace(/.\b/g, el=>el.toUpperCase());
+}
+
+
+
+//alternative way
+
+function testit(s){
+   return s.split(' ').map(el=>{
+    return el.split('').map((ele,i)=>i === el.length -1 ? ele.toUpperCase() : ele).join``
+  }).join(' ')
+}
+
+
+testit('rbpq b')
