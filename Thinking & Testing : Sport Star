@@ -1,0 +1,15 @@
+// No Story
+
+// No Description
+
+// Only by Thinking and Testing
+
+// Look at result of testcase, guess the code!
+
+
+
+function testit(act,s){
+  return s.split('').map((el,i)=> el === '_' && act[i] === 'jump' ? el='x' : el=== '|' && act[i] === 'run' ? el ='/': el).join``;
+}
+
+testit(["jump","run","jump","run","jump"],"_|_|_")
