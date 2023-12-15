@@ -1,0 +1,20 @@
+// In this Kata, you will be given an integer array and your task is to return the sum of elements occupying prime-numbered indices.
+
+// The first element of the array is at index 0.
+
+
+
+
+function total(arr){
+  let sum = 0;
+  arr.filter((el,ind)=>{
+    for(let i = 2; i < ind; i++){
+      if(ind % i === 0) return
+    }
+    (ind !== 0 && ind !==1) ? sum += el : ''
+  })
+  return sum;
+};
+
+
+total([1,2,3,4,5,6])
