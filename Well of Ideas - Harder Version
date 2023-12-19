@@ -7,6 +7,16 @@
 // The solution should be case insensitive (ie good, GOOD and gOOd all count as a good idea). All inputs may not be strings.
 
 
+
+
+function well(x){
+  let str = ('' + x).match(/good/gi) || []
+  return str.length > 2 ? 'I smell a series!' : str.length === 0 ? 'Fail!' : 'Publish!'
+}
+
+well([['gOOd', 'bAd', 'BAD', 'bad', 'bad', 'GOOD'], ['bad'], ['gOOd', 'BAD']])
+
+// Alternative way
 function well(x){
   let num = 0;
   x.map(el=>el.map(ele=>String(ele).toLowerCase() === 'good'? num++ : 1));
