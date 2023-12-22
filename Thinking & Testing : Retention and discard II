@@ -1,0 +1,14 @@
+// No Story
+
+// No Description
+
+// Only by Thinking and Testing
+
+// Look at result of testcase, guess the code!
+
+
+
+
+function testit(s,n){
+  return [...n.toString(2)].map((el,i)=>el === '1' ? s[i] : '').join``;
+}
