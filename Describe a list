@@ -1,0 +1,11 @@
+// Write function describeList which returns "empty" if the list is empty or "singleton" if it contains only one element or "longer"" if more.
+
+
+
+
+function describeList(x) {
+  const leng = x.length;
+  return leng === 0 ? 'empty' : leng === 1 ? "singleton" : "longer";
+}
+
+describeList([1.5])
