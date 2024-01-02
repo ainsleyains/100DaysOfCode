@@ -1,0 +1,17 @@
+// Write this function
+
+
+// for i from 1 to n, do i % m and return the sum
+
+// f(n=10, m=5) // returns 20 (1+2+3+4+0 + 1+2+3+4+0)
+// You'll need to get a little clever with performance, since n can be a very large number
+
+
+
+
+function f(n, m) {
+  const divi = Math.floor(n /m);
+  const remainder = n % m;
+  const sum = (m * (m-1)) /2;
+  return divi * sum + (remainder*(remainder+1)) /2;
+}
