@@ -1,0 +1,13 @@
+// Given an array of strings, sort the array into order of weight from light to heavy.
+
+// Weight units are grams(G), kilo-grams(KG) and tonnes(T).
+
+// Arrays will always contain correct and positive values aswell as uppercase letters.
+
+
+
+function arrange(arr){
+  const weight = (str) => str.replace('KG','000').replace('T', '000000').replace('G','');
+  return arr.sort((a,b)=>weight(a) - weight(b));
+ 
+}
