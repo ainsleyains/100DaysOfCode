@@ -1,0 +1,13 @@
+// You will be given a preloaded class called Database with a method login this takes two parameters username and password. This is a generic login function which will check the database for the user it will return either 'Successfully Logged in!' if it passes the test or 'Wrong username or password!' if either the password is wrong or username does not exist.
+
+// Usage
+// var database = new Database();
+// database.login('Timmy', 'password');
+
+
+
+
+function validate(username, password){
+ 
+  return password.indexOf('||') > -1 || password.indexOf('//') > -1 ? 'Wrong username or password!' : new Database().login(username, password);
+}
